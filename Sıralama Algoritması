@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int s1;
+int s2;
+int s3;
+
+int main() {
+    printf("Sayi 1'i giriniz:\n");
+    scanf("%d", &s1);
+    printf("Sayi 2'yi giriniz:\n");
+    scanf("%d", &s2);
+    printf("Sayi 3'u giriniz:\n");
+    scanf("%d", &s3);
+
+    if(s1 == s2 && s1 == s3){
+        printf("sayilar esit kral %d=%d=%d\n", s1, s2, s3);
+    }
+    else if((s1 == s2) && (s1 < s3)){
+        printf("esit sayi kafami karistirmaz siralama %d=%d<%d\n", s1, s2, s3);
+    }
+    else if((s1 == s2) && (s1 > s3)){
+        printf("esit sayi kafami karistirmaz siralama %d<%d=%d\n", s3, s1, s2);
+    }
+    else if((s1 == s3) && (s1 < s2)){
+        printf("esit sayi kafami karistirmaz siralama %d=%d<%d\n", s1, s3, s2);
+    }
+    else if((s1 == s3) && (s1 > s2)){
+        printf("esit sayi kafami karistirmaz siralama %d<%d=%d\n", s2, s1, s3);
+    }
+    else if((s2 == s3) && (s2 < s1)){
+        printf("esit sayi kafami karistirmaz siralama %d=%d<%d\n", s2, s3, s1);
+    }
+    else if((s2 == s3) && (s2 > s1)){
+        printf("esit sayi kafami karistirmaz siralama %d<%d=%d\n", s1, s2, s3);
+    }
+    else if(s1 > s2 && s1 > s3){
+        if(s2 > s3){
+            printf("siralama %d<%d<%d\n", s3, s2, s1);
+        }
+        else{
+            printf("siralama %d<%d<%d\n", s2, s3, s1);
+        }
+    }
+    else if(s2 > s1 && s2 > s3){
+        if(s1 > s3){
+            printf("siralama %d<%d<%d\n", s3, s1, s2);
+        }
+        else{
+            printf("siralama %d<%d<%d\n", s1, s3, s2);
+        }
+    }
+    else{
+        if(s1 > s2){
+            printf("siralama %d<%d<%d\n", s2, s1, s3);
+        }
+        else if(s1 < s2){
+            printf("siralama %d<%d<%d\n", s1, s2, s3);
+        }
+    }
+
+}
+
