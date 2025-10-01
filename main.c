@@ -1,34 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
-int i;
-int j;
-float notlar[5][4];
-float ortalama;
-float toplam;
+#include <string.h>
+char sesli_harfler[] = "AEIOUaeiou";
+char input;
+
 int main() {
 
-    for(i = 0; i < 5; i++) {
-        printf("%d. ogrencinin 4 notunu giriniz (araya bosluk koyunuz):\n", i+1);
-        for(j = 0; j < 4; j++) {
-            scanf("%f", &notlar[i][j]);
-            if(notlar[i][j] > 100) {
-                printf("notunuz 100 den buyuk olamaz tekrar giriniz(araya bosluk koyunuz): ");
-                scanf("%f", &notlar[i][j]);
-            }
-        }
-    }
-    for(i = 0; i < 5; i++) {
-        toplam = 0;
-        for(j = 0; j < 4; j++) {
-            toplam += notlar[i][j];
-        }
-    ortalama = toplam / 4;
+    printf("Bir harf giriniz:\n");
+    scanf(" %c", &input);
+    printf("%d",a);
+    if(strchr(sesli_harfler, input) != NULL)
+        printf("'%c' bir sesli harftir.\n", input);
+    else
+        printf("'%c' bir sesli harf degildir.\n", input);
 
-        printf("%d. ogrencinin ortalamasi: %f - ", i+1, ortalama);
-        if(ortalama >= 50)
-            printf("Gectiniz bravoæ\n");
-        else
-            printf("Too bad kaldiniz \n");
-    }
-
+    return 0;
 }
