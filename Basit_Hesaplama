@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int sayi1;
+int sayi2;
+int x;
+
+int main()
+{
+    printf("Sayi 1'i giriniz:\n");
+    scanf("%d", &sayi1);
+    printf("Sayi 2'yi giriniz:\n");
+    scanf("%d", &sayi2);
+    x = sayi1 +sayi2;
+    printf("sayilarin toplami:%d\n",x);
+    x = sayi1 -sayi2;
+    printf("sayilarin farki:%d\n",x);
+    x = sayi1 *sayi2;
+    printf("sayilarin carpimi:%d\n",x);
+    x = sayi1 /sayi2;
+    printf("sayilarin bolumu:%d\n",x);
+
+}
